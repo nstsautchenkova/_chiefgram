@@ -3889,13 +3889,6 @@ a:focus {
     height: 100vh;
     left: -15px;
     padding: 110px 28px 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 
   .menu.menu-open .menu__list {
