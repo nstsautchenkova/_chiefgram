@@ -305,3 +305,11 @@
         }
     }
 }
+
+@supports (-webkit-touch-callout: none) {
+    .menu.menu-header {
+        .menu__list {
+            height: -webkit-fill-available;
+        }
+    }
+}

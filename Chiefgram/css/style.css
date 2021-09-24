@@ -2506,6 +2506,12 @@ a:focus {
   -webkit-animation-duration: 1s;
 }
 
+@supports (-webkit-touch-callout: none) {
+  .menu.menu-header .menu__list {
+    height: -webkit-fill-available;
+  }
+}
+
 .bread-crumbs {
   padding: 40px 0 30px;
 }
