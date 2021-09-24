@@ -1,0 +1,239 @@
+.form {
+    .form-group {
+        position: relative;
+        margin-bottom: 10px;
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .form-control {
+            background: transparent;
+            border: 1px solid $white-dark;
+            border-radius: 20px;
+            padding: 20px 15px;
+            font-family: "Montserrat", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            width: 100%;
+            color: $dark-grey;
+            text-overflow: ellipsis;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+
+            .input-ico {
+                position: absolute;
+                left: 15px;
+                width: 16px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .form-control {
+                padding-left: 46px;
+            }
+
+            .validation {
+                display: none;
+                position: absolute;
+                font-size: 10px;
+                line-height: 22px;
+                color: $red;
+                right: 15px;
+            }
+
+            &.valid {
+                .input-ico {
+                    path {
+                        fill: $blue;
+                    }
+                }
+            }
+
+        }
+
+        .input-group:hover {
+            .input-ico {
+                path {
+                    fill: $blue;
+                }
+            }
+        }
+
+        &.validation-error {
+            .form-control {
+                border: 1px solid $red !important;
+            }
+
+            .validation {
+                display: block;
+            }
+        }
+    }
+}
+
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+form input.form-control::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: $gray;
+}
+
+form input.form-control::-moz-placeholder {
+    opacity: 1;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: $gray;
+}
+
+form input.form-control:-moz-placeholder {
+    opacity: 1;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: $gray;
+}
+
+form input.form-control:-ms-input-placeholder {
+    opacity: 1;
+    -ms-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: $gray;
+}
+
+form input.form-control:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+form input.form-control:focus::-moz-placeholder {
+    opacity: 0;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+form input.form-control:focus:-moz-placeholder {
+    opacity: 0;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+form input.form-control:focus:-ms-input-placeholder {
+    opacity: 0;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+form input.form-control:hover::-webkit-input-placeholder {
+    color: $dark-grey;
+}
+
+form input.form-control:hover::-moz-placeholder {
+    color: $dark-grey;
+}
+
+form input.form-control:hover:-moz-placeholder {
+    color: $dark-grey;
+}
+
+form input.form-control:hover:-ms-input-placeholder {
+    color: $dark-grey;
+}
+
+form textarea.form-control::-webkit-input-placeholder {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: $gray;
+}
+
+form textarea.form-control::-moz-placeholder {
+    opacity: 1;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: $gray;
+}
+
+form textarea.form-control:-moz-placeholder {
+    opacity: 1;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: $gray;
+}
+
+form textarea.form-control:-ms-input-placeholder {
+    opacity: 1;
+    -ms-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+    font-size: 14px;
+    color: $gray;
+}
+
+form textarea.form-control:focus::-webkit-input-placeholder {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+form textarea.form-control:focus::-moz-placeholder {
+    opacity: 0;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+form textarea.form-control:focus:-moz-placeholder {
+    opacity: 0;
+    -moz-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+form textarea.form-control:focus:-ms-input-placeholder {
+    opacity: 0;
+    -ms-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 950px) {
+    .form__group {
+        .form-group {
+            .validation {
+                top: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .form {
+        .form-group {
+            .input-group {
+                .validation {
+                    display: none !important;
+                }
+            }
+        }
+    }
+}

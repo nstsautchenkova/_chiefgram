@@ -1,0 +1,18 @@
+.bread-crumbs {
+    padding: 40px 0 30px;
+
+    ul {
+        display: flex;
+        align-items: center;
+
+        li {
+            font-size: 20px;
+            color: $blue;
+            margin-right: 20px;
+
+            a {
+                color: $white;
+            }
+        }
+    }
+}

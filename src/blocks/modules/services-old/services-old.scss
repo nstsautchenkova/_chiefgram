@@ -1,0 +1,59 @@
+.services__row {
+    margin: 72px -30px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .service {
+        width: 450px;
+        background: $white;
+        border-radius: 30px;
+        margin: 0 15px 62px;
+        padding: 52px 29px 30px;
+        position: relative;
+
+        .img {
+            width: 64px;
+            height: 64px;
+            background: #0088CC;
+            border-radius: 20px;
+            position: absolute;
+            top: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__description {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            h3 {
+                font-family: "Jura", sans-serif;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 21px;
+                color: $dark-grey;
+                margin-bottom: 25px;
+            }
+
+            .price {
+                margin: 25px 0;
+                color: #0088CC;
+            }
+
+            .btn {
+                margin-top: auto;
+            }
+        }
+
+        &:hover, &:active, &:focus{
+            box-shadow: 0px 6px 24px rgba(255, 255, 255, 0.3);
+        }
+    }
+}

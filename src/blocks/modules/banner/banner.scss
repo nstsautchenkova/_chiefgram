@@ -1,0 +1,209 @@
+.banner {
+    background: url(../img/banner-bg.svg) no-repeat top right;
+    min-height: 700px;
+    padding: 110px 0 0;
+    display: flex;
+
+    .container {
+        position: relative;
+        display: flex;
+    }
+}
+
+.banner__row {
+    display: flex;
+    align-items: center;
+
+    .banner__description {
+        max-width: 970px;
+        padding-bottom: 50px;
+        position: relative;
+        z-index: 2;
+
+        .section-title {
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            margin-bottom: 35px;
+        }
+
+        p {
+            color: $white;
+        }
+    }
+}
+
+.banner-menu {
+    margin-top: 37px;
+
+    .banner-menu__list {
+        display: grid;
+        grid-template-columns: 64px 64px;
+        gap: 10px;
+
+        .banner-menu__item {
+            .banner-menu__link {
+                width: 64px;
+                height: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $blue;
+                border: 2px solid $blue;
+                border-radius: 20px;
+                color: $white;
+            }
+
+            button.banner-menu__link {
+                width: 220px;
+            }
+
+            .banner-menu__link:active,
+            .banner-menu__link:focus {
+                background: #006699;
+            }
+        }
+    }
+}
+
+.banner__img-phone {
+    position: absolute;
+    bottom: 0;
+    right: 45px;
+}
+
+@media (max-width: 1500px) {
+    .banner__row {
+        .banner__description {
+            max-width: 100%;
+            width: calc(100vw - 540px);
+
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1370px) {
+    .banner {
+        min-height: 510px;
+        padding: 135px 0 0;
+        background: url(../img/banner-bg.svg) no-repeat top right;
+        background-position-x: 235px;
+
+        .container {
+            width: calc(100vw - 72px);
+        }
+    }
+
+    .banner__row {
+        .banner__description {
+            width: calc(100vw - 444px);
+            min-width: 580px;
+
+            .section-title {
+                margin-bottom: 15px;
+            }
+
+            h1 {
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .banner__img-phone {
+        width: 260px;
+    }
+
+    .banner-menu {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 950px) {
+    .banner {
+        background: url(../img/banner-bg.svg) no-repeat top right;
+        background-position-x: 255px;
+    }
+
+    .banner__img-phone {
+        right: 0;
+    }
+}
+
+@media (max-width: 650px) {
+    .banner {
+        min-height: auto;
+        background: url(../img/banner-bg__mob.svg) no-repeat top right;
+        background-position-x: right;
+        padding: 102px 0 30px;
+
+        .container {
+            width: calc(100vw - 30px);
+        }
+
+        .section-title {
+            h3 {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+
+    .banner__img-phone {
+        display: none;
+    }
+
+    .banner__row {
+        .banner__description {
+            min-width: 100%;
+            width: 100%;
+            padding-bottom: 0;
+
+            h1 {
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .banner-menu {
+        margin-top: 15px;
+
+        .banner-menu__list {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .banner-menu__item {
+                .banner-menu__link {
+                    height: 54px;
+                }
+            }
+        }
+
+        .banner-menu__item {
+            display: none;
+
+            button.banner-menu__link {
+                width: 100% !important;
+            }
+        }
+
+        .banner-menu__feedback {
+            display: block;
+
+        }
+    }
+}

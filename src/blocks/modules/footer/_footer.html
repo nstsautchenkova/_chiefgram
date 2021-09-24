@@ -1,0 +1,24 @@
+<footer class="footer">
+    <div class="container footer__row">
+        <a href="#" class="footer__logo logo"><img src="img/logo.svg" alt="Chiefgram" /></a>
+
+        @@include('../menu/_menu-footer.html')
+        <div class="footer__info">
+            <a href="tel:+375290000000" class="footer__phone">+375 (29) 000-00-00</a>
+
+            <div class="feedback">
+                <button type="button" class="feedback__btn" data-toggle="modal" data-animation="bounce"
+                    data-target=".modal-feedback">Заявка</button>
+                <a href="https://telegram.me/chat" class="footer__telegram">Чат Telegram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="container footer_bottom__row">
+            <div class="copyright">2021 Chiefgram</div>
+            <div class="logo-itoblaka"><a href="#"><img src="img/logo-itoblaka.svg" alt="itoblaka"></a></div>
+        </div>
+    </div>
+</footer>
+
+@@include('./_modal.html')

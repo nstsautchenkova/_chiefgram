@@ -1,0 +1,37 @@
+.pagination {
+    margin-top: 30px;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        li {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 26px;
+            color: $white;
+            margin: 0 5px;
+            background: $blue;
+            border-radius: 5px;
+
+            a {
+                background: $disable;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+            }
+            a:hover, a:active, a:focus{
+                color: $white;
+                background: $blue;
+            }
+        }
+    }
+}

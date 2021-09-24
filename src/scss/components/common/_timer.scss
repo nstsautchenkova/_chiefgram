@@ -1,0 +1,93 @@
+.timer {
+    width: 510px;
+    height: 130px;
+    background: #0088CC;
+    box-shadow: 0px 6px 26px rgba(0, 136, 204, 0.5);
+    border-radius: 20px;
+    padding: 25px 14px;
+
+    .countdown {
+        display: flex;
+        align-items: center;
+
+        .countdown-number {
+            color: $white;
+            text-align: center;
+            position: relative;
+            padding: 0 30px;
+            width: 120px;
+
+            span {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            .countdown-time {
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 61px;
+            }
+
+            .countdown-text {
+                font-size: 14px;
+                line-height: 17px;
+            }
+
+            &::after {
+                content: ':';
+                display: block;
+                position: absolute;
+                top: -3px;
+                right: -5px;
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 61px;
+                color: $white;
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .timer {
+        width: 290px;
+        min-width: 290px;
+        height: 70px;
+        padding: 13px 0;
+
+        .countdown {
+            .countdown-number {
+                padding: 0;
+                width: 100%;
+
+                .countdown-time {
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                .countdown-text {
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+
+                &::after {
+                    font-size: 20px;
+                    line-height: 24px;
+                    right: -2px;
+                    top: -1px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .timer {
+        width: 100%;
+    }
+}

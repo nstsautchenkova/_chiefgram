@@ -1,0 +1,150 @@
+.footer {
+    background: $dark-grey;
+    z-index: 9;
+
+    .footer__row {
+        padding: 34px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__info {
+        display: flex;
+
+        a {
+            color: $white;
+            font-family: "Jura", sans-serif;
+            font-weight: normal;
+        }
+
+        .feedback {
+            margin-left: 45px;
+        }
+
+        .feedback__btn:hover,
+        .feedback__btn:active,
+        .feedback__btn:focus {
+            color: $blue;
+        }
+
+        .footer__telegram {
+            margin-left: 45px;
+        }
+    }
+
+    .feedback__btn {
+        color: $white;
+        font-family: "Jura", sans-serif;
+        font-weight: normal;
+    }
+
+    .menu {
+        .menu__link {
+            color: $white;
+        }
+
+    }
+}
+
+.footer_bottom {
+    background: $bg-dark;
+    padding: 15px 0;
+
+    .footer_bottom__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .copyright {
+            font-size: 12px;
+            line-height: 15px;
+            color: $white;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .footer {
+        .footer__row {
+            padding: 21px 0;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .footer {
+        .footer__row {
+            padding: 30px 0 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer__logo {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .footer__info {
+            display: none;
+        }
+
+        .menu {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+
+            .menu__list {
+                display: block;
+
+                .menu__item {
+                    width: 100%;
+                    margin: 0 0 30px;
+                    text-align: center;
+
+                    .menu__link {
+                        font-size: 14px;
+                        line-height: 17px;
+                        min-height: 19px;
+                    }
+                }
+
+            }
+
+            .menu-mobile {
+                border-top: 0;
+                padding-top: 0;
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+                margin-top: 0;
+
+                a {
+                    color: $white;
+                    font-family: "Jura", sans-serif;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    min-height: 19px;
+                }
+
+                .header__phone {
+                    margin-bottom: 30px;
+                }
+
+                .feedback {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .feedback__btn {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
