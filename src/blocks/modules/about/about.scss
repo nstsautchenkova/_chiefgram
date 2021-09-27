@@ -36,28 +36,38 @@
 
 .about-more__item {
     background: $blue;
-    box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
     border-radius: 20px;
     padding: 25px;
     height: 209px;
 
     &:nth-child(odd) {
         background: $blue;
-        box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
     }
 
     &:nth-child(even) {
         background: $yellow;
-        box-shadow: 0px 6px 24px rgba(232, 192, 70, 0.5);
     }
 
     &:nth-child(4n + 3) {
         background: $red;
-        box-shadow: 0px 6px 24px rgba(217, 57, 85, 0.5);
     }
 
     &:nth-child(4n) {
         background: $green;
+    }
+    &:hover:nth-child(odd) {
+        box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
+    }
+
+    &:hover:nth-child(even) {
+        box-shadow: 0px 6px 24px rgba(232, 192, 70, 0.5);
+    }
+
+    &:hover:nth-child(4n + 3) {
+        box-shadow: 0px 6px 24px rgba(217, 57, 85, 0.5);
+    }
+
+    &:hover:nth-child(4n) {
         box-shadow: 0px 6px 24px rgba(39, 174, 96, 0.5);
     }
 

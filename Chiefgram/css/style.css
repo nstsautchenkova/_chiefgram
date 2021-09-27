@@ -647,6 +647,8 @@ h6 {
 .btn:hover {
   background: #0088CC;
   color: #fff;
+  -webkit-box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.3);
+          box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.3);
 }
 
 .btn:active,
@@ -1368,6 +1370,11 @@ a:focus {
   width: 220px;
 }
 
+.banner-menu .banner-menu__list .banner-menu__item .banner-menu__link:hover {
+  -webkit-box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.3);
+          box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.3);
+}
+
 .banner-menu .banner-menu__list .banner-menu__item .banner-menu__link:active,
 .banner-menu .banner-menu__list .banner-menu__item .banner-menu__link:focus {
   background: #006699;
@@ -1421,8 +1428,6 @@ a:focus {
 
 .about-more__item {
   background: #0088CC;
-  -webkit-box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
-          box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
   border-radius: 20px;
   padding: 25px;
   height: 209px;
@@ -1430,24 +1435,36 @@ a:focus {
 
 .about-more__item:nth-child(odd) {
   background: #0088CC;
-  -webkit-box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
-          box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
 }
 
 .about-more__item:nth-child(even) {
   background: #E8C046;
-  -webkit-box-shadow: 0px 6px 24px rgba(232, 192, 70, 0.5);
-          box-shadow: 0px 6px 24px rgba(232, 192, 70, 0.5);
 }
 
 .about-more__item:nth-child(4n+3) {
   background: #D93955;
-  -webkit-box-shadow: 0px 6px 24px rgba(217, 57, 85, 0.5);
-          box-shadow: 0px 6px 24px rgba(217, 57, 85, 0.5);
 }
 
 .about-more__item:nth-child(4n) {
   background: #27AE60;
+}
+
+.about-more__item:hover:nth-child(odd) {
+  -webkit-box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
+          box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
+}
+
+.about-more__item:hover:nth-child(even) {
+  -webkit-box-shadow: 0px 6px 24px rgba(232, 192, 70, 0.5);
+          box-shadow: 0px 6px 24px rgba(232, 192, 70, 0.5);
+}
+
+.about-more__item:hover:nth-child(4n+3) {
+  -webkit-box-shadow: 0px 6px 24px rgba(217, 57, 85, 0.5);
+          box-shadow: 0px 6px 24px rgba(217, 57, 85, 0.5);
+}
+
+.about-more__item:hover:nth-child(4n) {
   -webkit-box-shadow: 0px 6px 24px rgba(39, 174, 96, 0.5);
           box-shadow: 0px 6px 24px rgba(39, 174, 96, 0.5);
 }

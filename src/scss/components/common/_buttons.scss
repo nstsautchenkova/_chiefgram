@@ -1,8 +1,6 @@
 .btn {
     text-align: center;
     transition: .3s all;
-
-    @extend .btn;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -19,6 +17,7 @@
     &:hover {
         background: $blue;
         color: $white;
+        box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.3);
     }
 
     &:active,
@@ -33,7 +32,6 @@
         color: $white;
     }
 }
-
 @media (max-width: 950px) {
     .btn {
         font-size: 14px;
