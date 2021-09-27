@@ -139,9 +139,10 @@
 @media (max-width: 950px) {
     .about-more {
         gap: 0 15px;
+        padding: 15px 0;
     }
     .about__row{
-        margin-top: 15px;
+        margin-top: 0;
     }
     .about-slider {
         .about-more__item {
