@@ -199,9 +199,15 @@
 }
 
 @media (max-width: 1370px) {
+    .blog-list.mobile-scrolled {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 30px;
+        margin: 0 -15px 0 0;
+    }
     .blog-list__item {
         width: 450px;
-        margin: 0;
+        margin: 0 0 20px;
     }
 
     .blog-all {
@@ -257,6 +263,9 @@
 }
 
 @media (max-width: 950px) {
+    .blog-list.mobile-scrolled {
+        gap: 0 15px;
+    }
     .blog-container {
         margin-top: 20px;
 
@@ -268,6 +277,7 @@
     .blog-list__item {
         width: 354px;
         height: 334px;
+        margin-bottom: 10px;
 
         .img {
             padding: 15px 15px 0;

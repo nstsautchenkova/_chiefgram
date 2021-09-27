@@ -122,18 +122,24 @@
 
         }
     }
-
+    .about-more {
+        grid-template-columns: repeat(4, 1fr);
+    }
     .about-slider {
         width: 100%;
 
         .about-more__item {
             margin-top: 0 !important;
             width: 330px;
+            margin-bottom: 20px;
         }
     }
 }
 
 @media (max-width: 950px) {
+    .about-more {
+        gap: 0 15px;
+    }
     .about__row{
         margin-top: 15px;
     }
@@ -142,6 +148,7 @@
             width: 275px;
             padding: 20px;
             height: auto;
+            margin-bottom: 10px;
 
             .img {
                 width: 25px;

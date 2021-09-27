@@ -23,6 +23,7 @@ body {
 .wrapper {
     min-height: 100vh;
     background: $dark-grey;
+    overflow-x: hidden;
 }
 
 .wrapper-inside {
@@ -141,6 +142,38 @@ a:focus {
     }
 }
 
+.mobile-scrolled::-webkit-scrollbar-thumb {
+    background: #0088CC;
+    box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
+    border-radius: 3px;
+}
+
+.mobile-scrolled::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+.mobile-scrolled::-webkit-scrollbar-track {
+    border-radius: 3px;
+    background-color: transparent;
+}
+
+.mobile-scrolled::-webkit-scrollbar {
+    width: 0;
+    height: 4px;
+}
+
+.mobile-scrolled {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none
+}
+
+.mobile-scrolled {
+    position: relative;
+    z-index: 5;
+}
+
 @media (max-width: 1500px) {
     .container {
         width: 1300px;
@@ -173,8 +206,15 @@ a:focus {
     .slider-scrollbar {
         display: block;
     }
-    .wrapper-inside{
+
+    .wrapper-inside {
         padding: 100px 0 0;
+    }
+
+    .mobile-scrolled {
+        overflow-x: scroll;
+        margin-right: -15px;
+        padding-right: 15px;
     }
 }
 
@@ -209,25 +249,30 @@ a:focus {
             font-size: 16px;
             line-height: 24px;
         }
+
         .price .ps {
             top: -9px;
             margin-right: 2px;
             font-size: 12px;
         }
     }
+
     .circle-li {
         li {
             margin-bottom: 15px;
         }
     }
+
     .wrapper-inside {
         padding: 77px 0 0;
     }
+
     .row.row-2 {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 0;
     }
-    .mb-59{
+
+    .mb-59 {
         margin-bottom: 10px;
     }
 }

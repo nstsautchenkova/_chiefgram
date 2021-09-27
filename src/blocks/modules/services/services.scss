@@ -79,18 +79,29 @@
         .service {
             width: 450px;
             height: auto;
-            margin: 0;
+            margin: 0 0 20px;
         }
+    }
+    .services__row{
+        margin: 0 -15px 0 0;
+        justify-content: flex-start;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        gap: 0 30px;
     }
 }
 
 @media (max-width: 950px) {
+    .services__row {
+        gap: 0 15px;
+    }
     .services-slider {
         margin-top: 20px;
 
         .service {
             width: 354px;
             padding: 35px 45px;
+            margin-bottom: 10px;
         }
     }
 
