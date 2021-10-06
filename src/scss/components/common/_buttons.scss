@@ -1,11 +1,15 @@
 .btn {
     text-align: center;
     transition: .3s all;
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
+
+    font: {
+        family: 'Montserrat', sans-serif;
+        style: normal;
+        weight: 400;
+        size: 16px;
+    }
+
     color: $white;
-    font-size: 16px;
     line-height: 20px;
     border: 0;
     background: $blue;
@@ -13,6 +17,7 @@
     display: inline-block;
     padding: 22px 54px;
     min-width: 240px;
+
 
     &:hover {
         background: $blue;
@@ -32,6 +37,7 @@
         color: $white;
     }
 }
+
 @media (max-width: 950px) {
     .btn {
         font-size: 14px;
@@ -40,6 +46,7 @@
         min-width: 290px;
     }
 }
+
 @media (max-width: 650px) {
     .btn {
         min-width: 100%;
