@@ -2112,7 +2112,7 @@ a:focus {
 
 .blog-list__item .img {
   padding: 20px 20px 0;
-  height: 249px;
+  height: 269px;
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
@@ -2652,17 +2652,25 @@ a:focus {
   }
 }
 
+@media (max-width: 1560px) {
+  .blog-list__item {
+    width: calc(33.3333333333% - 30px);
+  }
+}
+
 @media (max-width: 1550px) {
   .header {
     width: 1410px;
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1540px) {
   .container {
     width: 1300px;
   }
+}
 
+@media (max-width: 1500px) {
   .banner__row .banner__description {
     max-width: 100%;
     width: calc(100vw - 540px);
@@ -2713,10 +2721,6 @@ a:focus {
     top: 120px;
   }
 
-  .blog-list__item {
-    width: 423px;
-  }
-
   .blog-inside__container {
     width: 1410px;
   }
@@ -2724,6 +2728,10 @@ a:focus {
   .blog-inside__container .description-banner h1 {
     font-size: 38px;
     line-height: 58px;
+  }
+
+  .blog-list__item {
+    width: calc(33.3333333333% - 30px);
   }
 
   .banner-footer__top .left-side .tit h2 {
@@ -3039,7 +3047,7 @@ a:focus {
   }
 
   .blog-all .blog-list .blog-list__item .img {
-    height: 268px;
+    height: 288px;
   }
 
   .blog-all .pagination {
@@ -3069,6 +3077,10 @@ a:focus {
   .blog-inside__container .description-banner p {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .blog-list__item {
+    height: 418px;
   }
 
   .left-side .tit {
@@ -3412,11 +3424,12 @@ a:focus {
 
   .blog-list__item .img {
     padding: 15px 15px 0;
-    height: 197px;
+    height: 212px;
   }
 
   .blog-list__item .description {
     padding: 15px;
+    height: 122px;
   }
 
   .blog-list__item .description .btn {
@@ -3424,8 +3437,16 @@ a:focus {
     padding: 14px;
   }
 
+  .blog-list__item .description p {
+    line-height: 20px;
+  }
+
   .blog-all .blog-list .blog-list__item .img {
-    height: 183px;
+    height: 212px;
+  }
+
+  .blog-list__item .description .info {
+    height: 98px;
   }
 
   .blog-inside__container .description-banner {
@@ -4068,15 +4089,15 @@ a:focus {
   }
 
   .blog-list__item .img {
-    height: 149px;
+    height: 164px;
   }
 
   .blog-list__item .description {
-    height: 172px;
+    height: 156px;
   }
 
   .blog-list__item .description .info {
-    height: 143px;
+    height: 136px;
   }
 
   .blog-list__item .description p {
@@ -4153,7 +4174,7 @@ a:focus {
   }
 
   .blog-all .blog-list .blog-list__item .img {
-    height: 158px;
+    height: 173px;
   }
 
   .blog-all .pagination ul li {
