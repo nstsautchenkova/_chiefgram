@@ -1384,6 +1384,7 @@ a:focus {
   position: absolute;
   bottom: 0;
   right: 45px;
+  max-width: 360px;
 }
 
 .about {
