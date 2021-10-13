@@ -2842,8 +2842,6 @@ a:focus {
   .banner {
     min-height: 510px;
     padding: 135px 0 0;
-    background: url(../img/banner-bg.svg) no-repeat top right;
-    background-position-x: 235px;
   }
 
   .banner .container {
@@ -3142,6 +3140,13 @@ a:focus {
 
   .menu .menu__item {
     margin: 0 22px;
+  }
+}
+
+@media (max-width: 1270px) {
+  .banner {
+    background: url(../img/banner-bg.svg) no-repeat top right;
+    background-position-x: 235px;
   }
 }
 

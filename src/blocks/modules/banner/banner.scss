@@ -94,8 +94,6 @@
     .banner {
         min-height: 510px;
         padding: 135px 0 0;
-        background: url(../img/banner-bg.svg) no-repeat top right;
-        background-position-x: 235px;
 
         .container {
             width: calc(100vw - 72px);
@@ -131,6 +129,12 @@
     }
 }
 
+@media (max-width: 1270px) {
+    .banner {
+        background: url(../img/banner-bg.svg) no-repeat top right;
+        background-position-x: 235px;
+    }
+}
 @media (max-width: 950px) {
     .banner {
         background: url(../img/banner-bg.svg) no-repeat top right;
