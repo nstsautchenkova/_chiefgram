@@ -1155,6 +1155,14 @@ a:focus {
   z-index: 5;
 }
 
+.flickity-enabled:focus {
+  outline: none;
+}
+
+.carousel-cell {
+  counter-increment: carousel-cell;
+}
+
 .header {
   background: #fff;
   -webkit-box-shadow: 0px 8px 24px rgba(51, 51, 51, 0.1);
@@ -1507,6 +1515,10 @@ a:focus {
   font-size: 14px;
   line-height: 24px;
   margin-top: 15px;
+}
+
+.icons-slider-wrap {
+  padding: 20px 0;
 }
 
 .services__row {
@@ -2799,6 +2811,16 @@ a:focus {
     padding-right: 15px;
   }
 
+  .progress-bar {
+    height: 5px;
+    width: 0;
+    min-width: 100px;
+    background: #08c;
+    -webkit-box-shadow: 0 6px 24px rgba(0, 136, 204, 0.5);
+    box-shadow: 0 6px 24px rgba(0, 136, 204, 0.5);
+    border-radius: 3px;
+  }
+
   .header {
     width: calc(100vw - 30px);
     -webkit-transform: none;
@@ -2896,6 +2918,14 @@ a:focus {
     margin-bottom: 20px;
   }
 
+  .about-more {
+    display: block;
+  }
+
+  .about-more__item {
+    margin-right: 15px;
+  }
+
   .services-slider {
     width: 100%;
     margin-top: 62px;
@@ -2915,6 +2945,15 @@ a:focus {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 0 30px;
+  }
+
+  .services__row {
+    display: block;
+    margin: 0;
+  }
+
+  .services-slider .service {
+    margin-right: 15px;
   }
 
   .path {
@@ -3081,6 +3120,15 @@ a:focus {
 
   .blog-list__item {
     height: 418px;
+  }
+
+  .blog-list {
+    display: block;
+    margin: 0;
+  }
+
+  .blog-list__item {
+    margin-right: 15px;
   }
 
   .left-side .tit {
@@ -4075,6 +4123,12 @@ a:focus {
 
   .trigger-menu {
     display: block;
+  }
+}
+
+@media (max-width: 575px) {
+  .icons-slider-wrap {
+    padding: 15px 0;
   }
 }
 

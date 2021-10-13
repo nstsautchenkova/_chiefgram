@@ -72,10 +72,13 @@ function initializeClock(id, endtime) {
     var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = "January 01 2018 00:00:00 GMT+0300";
+/* var deadline = "January 01 2018 00:00:00 GMT+0300";
 var deadline = new Date(Date.parse(new Date()) + 23 * 24 * 60 * 60 * 1000);
-initializeClock('countdown', deadline);
-
+initializeClock('countdown', deadline); */
+$(document).on("ready", function () {
+    var deadline = $("#countdown").data("deadline");
+    initializeClock('countdown', deadline);
+})
 // anchor
 $('.anchor').on('click', function () {
     var href = $(this).attr('href');
@@ -91,8 +94,8 @@ $('.anchor').on('click', function () {
 });
 
 // Menu
-$(document).on("ready", function() {
-    $(".menu .trigger-menu").click(function() {
+$(document).on("ready", function () {
+    $(".menu .trigger-menu").click(function () {
         $(this).toggleClass('op');
         $(".menu").toggleClass("menu-open");
         $('.menu .hamburger-menu__bar').toggleClass('animate');
@@ -102,9 +105,145 @@ $(document).on("ready", function() {
 });
 
 // portfolio dropdown
-$(document).ready(function() {
-    $(".portfolio .tit").click(function() {
+$(document).ready(function () {
+    $(".portfolio .tit").click(function () {
         $(this).siblings(".description").slideToggle('medium');
         $(this).toggleClass('active');
     });
+});
+
+
+// adaptive
+/* $(document).on("ready", function () {
+    if (window.matchMedia("(max-width: 1370px)").matches) {
+
+        // about-slider
+        $(".about-slider").addClass('swiper-container');
+        $(".about-more").addClass('swiper-wrapper');
+        $(".about-slider .swiper-wrapper").removeClass('about-more');
+        $(".about-more__item").addClass('swiper-slide');
+
+
+        var about__slider = new Swiper(".about-slider", {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            scrollbar: {
+                el: '.about-slider .swiper-scrollbar',
+                hide: false,
+            },
+            breakpoints: {
+                960: {
+                    spaceBetween: 15
+                },
+            }
+        });
+
+        // services-slider
+        $(".services-slider").addClass('swiper-container');
+        $(".services__row").addClass('swiper-wrapper');
+        $(".services-slider .swiper-wrapper").removeClass('services__row');
+        $(".service").addClass('swiper-slide');
+
+
+        var services__slider = new Swiper(".services-slider", {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            scrollbar: {
+                el: '.services-slider .swiper-scrollbar',
+                hide: false,
+            },
+            breakpoints: {
+                960: {
+                    spaceBetween: 15
+                },
+            }
+        });
+
+        // blog-slider
+        $(".blog-slider").addClass('swiper-container');
+        $(".blog-slider .blog-list").addClass('swiper-wrapper');
+        $(".blog-slider .swiper-wrapper").removeClass('blog-list');
+        $(".blog-slider .blog-list__item").addClass('swiper-slide');
+
+
+        var blog_slider = new Swiper(".blog-slider", {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            slideToClickedSlide:true,
+            loop:true,
+            scrollbar: {
+                el: '.blog-slider .swiper-scrollbar',
+                hide: false,
+            },
+            breakpoints: {
+                960: {
+                    spaceBetween: 15
+                },
+            }
+        });
+        
+    } else { }
+}); */
+
+
+// Обновить страницу при смене ширины экрана
+
+var windowWidth = window.innerWidth;
+window.onresize = function () {
+    var newWindowWidth = window.innerWidth;
+    if (newWindowWidth != windowWidth) {
+        windowWidth = newWindowWidth;
+        location.reload();
+    }
+};
+
+
+$(document).on("ready", function () {
+    if (window.matchMedia("(max-width: 1370px)").matches) {
+        
+        // .about-slider
+         var aboutFlickity = new Flickity('.about-more', { freeScroll: true, contain: true, prevNextButtons: false, pageDots: false, cellAlign: 'left' }); 
+
+        var aboutProgressBar = document.querySelector('.about-slider .progress-bar');
+        aboutFlickity.on('scroll', function (progress) {
+            progress = Math.max(0, Math.min(1, progress));
+            aboutProgressBar.style.width = progress * 100 + '%';
+        }); 
+
+
+        // blog-slider
+        var blogFlickity = new Flickity('.blog-list', { freeScroll: true, contain: true, prevNextButtons: false, pageDots: false, cellAlign: 'left' }); 
+
+        var blogProgressBar = document.querySelector('.blog-slider .progress-bar');
+        blogFlickity.on('scroll', function (progress) {
+            progress = Math.max(0, Math.min(1, progress));
+            blogProgressBar.style.width = progress * 100 + '%';
+        }); 
+
+
+        // services-slider
+        $(".services-slider").addClass('swiper-container');
+        $(".services__row").addClass('swiper-wrapper');
+        $(".services-slider .swiper-wrapper").removeClass('services__row');
+        $(".service").addClass('swiper-slide');
+
+
+        var services__slider = new Swiper(".services-slider", {
+            slidesPerView: 'auto',
+            spaceBetween: 30,
+            freeMode: {
+                enabled: true,
+                sticky: true,
+            },
+            scrollbar: {
+                el: '.services-slider .swiper-scrollbar',
+                hide: false,
+            },
+            breakpoints: {
+                960: {
+                    spaceBetween: 15
+                },
+            }
+        });
+    }
 });

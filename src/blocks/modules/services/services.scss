@@ -135,3 +135,14 @@
         }
     }
 }
+
+
+@media(max-width: 1370px) {
+    .services__row {
+        display: block;
+        margin: 0;
+    }
+    .services-slider .service  {
+        margin-right: 15px;
+    }
+}

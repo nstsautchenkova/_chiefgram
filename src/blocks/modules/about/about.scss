@@ -55,6 +55,7 @@
     &:nth-child(4n) {
         background: $green;
     }
+
     &:hover:nth-child(odd) {
         box-shadow: 0px 6px 24px rgba(0, 136, 204, 0.5);
     }
@@ -132,9 +133,11 @@
 
         }
     }
+
     .about-more {
         grid-template-columns: repeat(4, 1fr);
     }
+
     .about-slider {
         width: 100%;
 
@@ -151,9 +154,11 @@
         gap: 0 15px;
         padding: 15px 0;
     }
-    .about__row{
+
+    .about__row {
         margin-top: 0;
     }
+
     .about-slider {
         .about-more__item {
             width: 275px;
@@ -190,9 +195,31 @@
                 font-size: 14px;
                 line-height: 24px;
             }
-            .btn{
+
+            .btn {
                 margin-top: 0;
             }
+        }
+    }
+}
+
+
+
+.icons-slider-wrap {
+    padding: 20px 0;
+
+    @media(max-width: 575px) {
+        padding: 15px 0;
+    }
+}
+
+
+@media(max-width: 1370px) {
+    .about-more {
+        display: block;
+
+        &__item {
+            margin-right: 15px;
         }
     }
 }

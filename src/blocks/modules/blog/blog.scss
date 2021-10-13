@@ -479,3 +479,15 @@
     }
 
 }
+
+
+@media(max-width: 1370px) {
+    .blog-list {
+        display: block;
+        margin: 0;
+
+        &__item {
+            margin-right: 15px;
+        }
+    }
+}
