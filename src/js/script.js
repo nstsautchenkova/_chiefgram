@@ -132,6 +132,11 @@ $(document).on("ready", function () {
     if (window.matchMedia("(max-width: 1370px)").matches) {
 
         // about-slider
+        $(".about-slider").addClass('swiper-container');
+        $(".about-more").addClass('swiper-wrapper');
+        $(".about-slider .swiper-wrapper").removeClass('about-more');
+        $(".about-more__item").addClass('swiper-slide');
+        
         var about__slider = new Swiper(".about-slider", {
             slidesPerView: 'auto',
             spaceBetween: 30,

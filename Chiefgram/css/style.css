@@ -2943,6 +2943,10 @@ a:focus {
     margin-bottom: 0;
   }
 
+  .about-slider {
+    padding-right: 15px;
+  }
+
   .about-more {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2983,6 +2987,10 @@ a:focus {
   .services__row {
     display: block;
     margin: 0;
+  }
+
+  .services-slider {
+    padding-right: 15px;
   }
 
   .services-slider .service {
