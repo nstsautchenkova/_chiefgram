@@ -112,21 +112,33 @@ $(document).ready(function () {
     });
 });
 
+/* ---------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------*/
+/*        NEW         --------------------------------------------------*/
+/* ---------------------------------------------------------------------*/
+/* ---------------------------------------------------------------------*/
 
-// adaptive
-/* $(document).on("ready", function () {
+// Обновить страницу при смене ширины экрана
+var windowWidth = window.innerWidth;
+window.onresize = function () {
+    var newWindowWidth = window.innerWidth;
+    if (newWindowWidth != windowWidth) {
+        windowWidth = newWindowWidth;
+        location.reload();
+    }
+};
+
+$(document).on("ready", function () {
     if (window.matchMedia("(max-width: 1370px)").matches) {
 
         // about-slider
-        $(".about-slider").addClass('swiper-container');
-        $(".about-more").addClass('swiper-wrapper');
-        $(".about-slider .swiper-wrapper").removeClass('about-more');
-        $(".about-more__item").addClass('swiper-slide');
-
-
         var about__slider = new Swiper(".about-slider", {
             slidesPerView: 'auto',
             spaceBetween: 30,
+            freeMode: {
+                enabled: true,
+                sticky: true,
+            },
             scrollbar: {
                 el: '.about-slider .swiper-scrollbar',
                 hide: false,
@@ -138,6 +150,7 @@ $(document).ready(function () {
             }
         });
 
+
         // services-slider
         $(".services-slider").addClass('swiper-container');
         $(".services__row").addClass('swiper-wrapper');
@@ -148,6 +161,10 @@ $(document).ready(function () {
         var services__slider = new Swiper(".services-slider", {
             slidesPerView: 'auto',
             spaceBetween: 30,
+            freeMode: {
+                enabled: true,
+                sticky: true,
+            },
             scrollbar: {
                 el: '.services-slider .swiper-scrollbar',
                 hide: false,
@@ -169,74 +186,12 @@ $(document).ready(function () {
         var blog_slider = new Swiper(".blog-slider", {
             slidesPerView: 'auto',
             spaceBetween: 30,
-            slideToClickedSlide:true,
-            loop:true,
-            scrollbar: {
-                el: '.blog-slider .swiper-scrollbar',
-                hide: false,
-            },
-            breakpoints: {
-                960: {
-                    spaceBetween: 15
-                },
-            }
-        });
-        
-    } else { }
-}); */
-
-
-// Обновить страницу при смене ширины экрана
-
-var windowWidth = window.innerWidth;
-window.onresize = function () {
-    var newWindowWidth = window.innerWidth;
-    if (newWindowWidth != windowWidth) {
-        windowWidth = newWindowWidth;
-        location.reload();
-    }
-};
-
-
-$(document).on("ready", function () {
-    if (window.matchMedia("(max-width: 1370px)").matches) {
-        
-        // .about-slider
-         var aboutFlickity = new Flickity('.about-more', { freeScroll: true, contain: true, prevNextButtons: false, pageDots: false, cellAlign: 'left' }); 
-
-        var aboutProgressBar = document.querySelector('.about-slider .progress-bar');
-        aboutFlickity.on('scroll', function (progress) {
-            progress = Math.max(0, Math.min(1, progress));
-            aboutProgressBar.style.width = progress * 100 + '%';
-        }); 
-
-
-        // blog-slider
-        var blogFlickity = new Flickity('.blog-list', { freeScroll: true, contain: true, prevNextButtons: false, pageDots: false, cellAlign: 'left' }); 
-
-        var blogProgressBar = document.querySelector('.blog-slider .progress-bar');
-        blogFlickity.on('scroll', function (progress) {
-            progress = Math.max(0, Math.min(1, progress));
-            blogProgressBar.style.width = progress * 100 + '%';
-        }); 
-
-
-        // services-slider
-        $(".services-slider").addClass('swiper-container');
-        $(".services__row").addClass('swiper-wrapper');
-        $(".services-slider .swiper-wrapper").removeClass('services__row');
-        $(".service").addClass('swiper-slide');
-
-
-        var services__slider = new Swiper(".services-slider", {
-            slidesPerView: 'auto',
-            spaceBetween: 30,
             freeMode: {
                 enabled: true,
                 sticky: true,
             },
             scrollbar: {
-                el: '.services-slider .swiper-scrollbar',
+                el: '.blog-slider .swiper-scrollbar',
                 hide: false,
             },
             breakpoints: {

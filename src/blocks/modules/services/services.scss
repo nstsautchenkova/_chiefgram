@@ -82,11 +82,12 @@
             margin: 0 0 20px;
         }
     }
-    .services__row{
+
+    .services__row {
         margin: 0 -15px 0 0;
         justify-content: flex-start;
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: repeat(5, 1fr);
         gap: 0 30px;
     }
 }
@@ -95,6 +96,7 @@
     .services__row {
         gap: 0 15px;
     }
+
     .services-slider {
         margin-top: 20px;
 
@@ -142,7 +144,13 @@
         display: block;
         margin: 0;
     }
-    .services-slider .service  {
-        margin-right: 15px;
+
+    .services-slider {
+        .service {
+            margin-bottom: 0 !important;
+            &:last-child{
+                margin-right: 0 !important;
+            }
+        }
     }
 }
