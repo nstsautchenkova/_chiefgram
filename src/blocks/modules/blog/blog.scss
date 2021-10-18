@@ -50,7 +50,7 @@
             transition: all 0.2s ease-out;
 
             .info {
-                height: 100px;
+                height: 98px;
                 margin-bottom: 10px;
                 overflow: hidden;
             }
@@ -500,11 +500,23 @@
     }
 }
 
-.blog-list{
-    margin: 0 0 30px;
-    justify-content: space-between;
+.blog-list {
+    margin: 0;
+    justify-content: center;
 
-    &__item{
-        margin: 0;
+    &__item {
+        margin: 0 30px 30px 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &--all {
+        .blog-list__item {
+            &:nth-child(3n + 3) {
+                margin-right: 0;
+            }
+        }
     }
 }
