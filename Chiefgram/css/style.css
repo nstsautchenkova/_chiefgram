@@ -1155,6 +1155,21 @@ a:focus {
   z-index: 5;
 }
 
+/* new style */
+
+.bread-crumbs ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bread-crumbs ul li {
+  margin-bottom: 10px;
+}
+
+.blog-list {
+  margin: 0;
+}
+
 .header {
   background: #fff;
   -webkit-box-shadow: 0px 8px 24px rgba(51, 51, 51, 0.1);
@@ -2277,6 +2292,17 @@ a:focus {
 
 .mobile-title {
   display: none;
+}
+
+.blog-list {
+  margin: 0 0 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog-list__item {
+  margin: 0;
 }
 
 .banner-footer {

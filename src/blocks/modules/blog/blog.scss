@@ -499,3 +499,12 @@
         }
     }
 }
+
+.blog-list{
+    margin: 0 0 30px;
+    justify-content: space-between;
+
+    &__item{
+        margin: 0;
+    }
+}
