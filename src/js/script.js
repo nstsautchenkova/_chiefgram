@@ -104,14 +104,17 @@ $(document).on("ready", function () {
     });
 });
 
-// portfolio dropdown
-$(document).ready(function () {
-    $(".portfolio .tit").click(function () {
-        $(this).siblings(".description").slideToggle('medium');
-        $(this).toggleClass('active');
-    });
-});
+$(document).on("ready", function () {
+    if (window.matchMedia("(max-width: 650px)").matches) {
+        // portfolio dropdown
 
+        $(".portfolio .tit").click(function () {
+            $(this).siblings(".description").slideToggle('medium');
+            $(this).toggleClass('active');
+        });
+
+    };
+});
 /* ---------------------------------------------------------------------*/
 /* ---------------------------------------------------------------------*/
 /*        NEW         --------------------------------------------------*/
@@ -136,7 +139,7 @@ $(document).on("ready", function () {
         $(".about-more").addClass('swiper-wrapper');
         $(".about-slider .swiper-wrapper").removeClass('about-more');
         $(".about-more__item").addClass('swiper-slide');
-        
+
         var about__slider = new Swiper(".about-slider", {
             slidesPerView: 'auto',
             spaceBetween: 30,
